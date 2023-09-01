@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
+  height: 100vh;
+  width: 100vw;
+  background-color: antiquewhite;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+h1{
+  font-size: clamp(1.4rem, 2.5vw, 2.5rem);
 }
 
-.App-link {
-  color: #61dafb;
+.calc-box{
+  display: flex;
+  flex-direction: column;
+  margin-top: 3em;
+  width: 30vw;
+  border: 2px solid black;
+}
+.display-screen{
+  height: 8vh;
+}
+.btns{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns with equal width */
+  grid-template-rows: repeat(5, 1fr);    /* 5 rows with equal height */
+  gap: 0;                          /* Gap between grid items */                       /* Optional: Set a specific width */
+}
+.number,.add,.sub, .multiply, .divide, .equalto, .delete, .clear{
+  padding: 10px;
+  background-color: #ccc;
+  border: 1px solid black;
+  cursor: pointer;
+  background-color: rgb(218, 204, 204);
+  font-size: 1rem;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 650px){
+  .calc-box{
+    width: 55vw;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 320px){
+  .calc-box{
+    width: 75vw;
   }
+}
+
+.delete{
+  background-color: rgb(250, 54, 54);
+}
+
+.clear{
+  background-color: lightgreen;
 }
