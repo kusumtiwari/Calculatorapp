@@ -12,13 +12,7 @@ function App() {
   
   function calculate(){
     let result = eval(inputValue);
-    if(!isNaN(result))
-    {
-      prompt("enter a valid expression");
-    }
-    else{
       setinputValue(result);
-    }
   }
 
   function clear(){
